@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import Display from './Components/Display'
-import Button from './Components/Button'
+import ButtonGrid from './Components/ButtonGrid'
+import './App.css'
 
 function App() {
   const [displayValue, setDisplayValue] = useState('0')
 
   return (
-    <div>
+    <div className="calculator">
       <Display value={displayValue} />
-      {/* Add calculator buttons here in the future */}
+      <ButtonGrid onButtonClick={(label) => setDisplayValue(label)} />
     </div>
   )
 }
