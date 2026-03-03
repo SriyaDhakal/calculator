@@ -5,8 +5,9 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
-  return <button className="calculator-button" onClick={onClick}>{label}</button>;
-};
+const Button = ({ label, onClick }: ButtonProps) => {
+  return <button onClick={onClick}>{label}</button>
+}
+
 
 export default Button;
