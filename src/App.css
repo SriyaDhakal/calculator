@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #0a0a0f;
+  background-color: lightgoldenrodyellow;
   background-image: 
     radial-gradient(ellipse at 20% 50%, rgba(255, 100, 0, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 50%, rgba(255, 50, 50, 0.08) 0%, transparent 60%);
@@ -16,16 +16,15 @@ body {
 }
 
 
-
 .display {
   background: #0d0d14;
   color: #ff6b35;
-  font-size: 48px;
+  font-size: 25px;
   text-align: right;
   padding: 20px 24px;
   border-radius: 14px;
   margin-bottom: 20px;
-  min-height: 95px;
+  min-height: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -39,3 +38,10 @@ body {
   word-break: break-all;
   transition: all 0.1s ease;
 }
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+

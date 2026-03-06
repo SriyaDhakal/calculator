@@ -1,9 +1,12 @@
 import Button from './Button'
 
-const buttons = ['7', '8', '9', '/',
-                 '4', '5', '6', '*',
-                 '1', '2', '3', '-',
-                 '0', '.', '=', '+']
+const buttons = [
+  'C',  '+/-', '%', '/',
+  '7',  '8',   '9', '*',
+  '4',  '5',   '6', '-',
+  '1',  '2',   '3', '+',
+  '0',  '.',   '=', ''
+]
 
 const ButtonGrid = ({ onButtonClick }: { onButtonClick: (label: string) => void }) => {
     return (

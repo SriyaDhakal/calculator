@@ -4,12 +4,31 @@ import ButtonGrid from './Components/ButtonGrid'
 import './App.css'
 
 function App() {
-  const [displayValue, setDisplayValue] = useState('0')
+  const [expression, setExpression] = useState('')
+  const [result, setResult] = useState('0')
+
+  const handleButtonClick = (label: string) => {
+    if (label === '=') {
+      try {
+        const evaluated = eval(expression)
+        
+        setExpression(`${expression} = ${evaluated}`)
+      } catch {
+        setResult('Error')
+      }
+    } else if (label === 'C') {
+      setExpression('')
+      setResult('0')
+    } else {
+      setExpression(prev => prev + label)
+      setResult('')
+    }
+  }
 
   return (
     <div className="calculator">
-      <Display value={displayValue} />
-      <ButtonGrid onButtonClick={(label) => setDisplayValue(label)} />
+      <Display expression={expression} value={result} />
+      <ButtonGrid onButtonClick={handleButtonClick} />
     </div>
   )
 }
