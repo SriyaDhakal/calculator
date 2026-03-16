@@ -1,4 +1,3 @@
-
 type DisplayProps = {
   value: string
   expression: string
@@ -6,7 +5,7 @@ type DisplayProps = {
 
 const Display = ({ expression, value }: DisplayProps) => {
   return (
-    <div className="display">
+    <div className="calculator-display">
       <div className="expression">{expression}</div>
       <div className="result">{value}</div>
     </div>
@@ -14,5 +13,4 @@ const Display = ({ expression, value }: DisplayProps) => {
 }
 
 export default Display
-
 

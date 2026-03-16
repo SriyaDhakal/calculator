@@ -11,7 +11,6 @@ function App() {
     if (label === '=') {
       try {
         const evaluated = eval(expression)
-        
         setExpression(`${expression} = ${evaluated}`)
       } catch {
         setResult('Error')
@@ -26,9 +25,11 @@ function App() {
   }
 
   return (
-    <div className="calculator">
-      <Display expression={expression} value={result} />
-      <ButtonGrid onButtonClick={handleButtonClick} />
+    <div className="calculator-container">
+      <div className="calculator-wrapper">
+        <Display expression={expression} value={result} />
+        <ButtonGrid onButtonClick={handleButtonClick} />
+      </div>
     </div>
   )
 }
