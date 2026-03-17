@@ -22,6 +22,17 @@
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(78, 74, 74, 0.2);
 }
+.calculator-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+/* THIS IS KEY - Makes calculator and history side by side */
+.calculator-layout {
+  display: flex;
+  gap: 24px;
+}
 .button-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -34,4 +45,133 @@
   padding: 16px;
   border-radius: 8px;
   margin-bottom: 24px;
+}
+
+/* History panel - side by side with calculator */
+.history-panel {
+  flex: 1;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  max-height: 600px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.history-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.clear-history-btn {
+  font-size: 14px;
+  color: #ef4444;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.clear-history-btn:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.history-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Custom scrollbar */
+.history-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.history-list::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.history-item {
+  background: linear-gradient(135deg, #faf5ff 0%, #fce7f3 100%);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e9d5ff;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+.history-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
+.history-calculation {
+  color: #374151;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+}
+
+.history-empty {
+  text-align: center;
+  padding: 64px 20px;
+  color: #9ca3af;
+}
+
+.history-empty-icon {
+  font-size: 72px;
+  opacity: 0.2;
+  margin-bottom: 16px;
+}
+
+.history-empty p {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.history-empty-subtitle {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.history-count {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Responsive - stack on mobile */
+@media (max-width: 900px) {
+  .history-panel {
+    max-height: 400px;
+    width: 100%;
+  }
 }
