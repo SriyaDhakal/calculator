@@ -35,12 +35,16 @@ function App() {
     <div className="calculator-container">
       <div className="calculator-wrapper">
               <h1 className="calculator-title">Calculator with History</h1>
-               <div className="calculator-layout"></div>
-        <Display expression={expression} value={result} />
+             <div className="calculator-layout">  
+              <div className="calculator">
+        <Display expression={expression} value={result} /> 
         <ButtonGrid onButtonClick={handleButtonClick} />
+        </div>
         <History history={history} onClearHistory={handleClearHistory} />
       </div>
     </div>
+    </div>
+    
   )
 }
 

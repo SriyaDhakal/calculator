@@ -32,6 +32,7 @@
 .calculator-layout {
   display: flex;
   gap: 24px;
+  align-items: flex-start;
 }
 .button-grid {
   display: grid;
@@ -45,6 +46,8 @@
   padding: 16px;
   border-radius: 8px;
   margin-bottom: 24px;
+  width: 40vh; /* ← Matches parent width */
+  box-sizing: border-box; /* ← Includes padding in width */
 }
 
 /* History panel - side by side with calculator */
@@ -55,14 +58,15 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   padding: 24px;
   display: flex;
-  flex-direction: row;
-  max-height: 600px;
+  flex-direction: column;
+  max-height: 368.94px;
+  min-width: 400px; /* Ensure minimum width */
 }
 
 .history-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid #e5e7eb;
