@@ -9,18 +9,29 @@
 }
 .calculator-container {
   min-height: 100vh;
-  width: 100%;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(135deg, #9333ea 0%, #ec4899 50%, #ef4444 100%);
-  padding: 32px;
-   display: flex;  
+  padding: 0;
+  margin: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 .calculator-wrapper {
+  flex: 1;
+  height: 90vh;
+  width: 90vw;
+  max-width: 1200px;
+  max-height: 900px;
   background-color: #dee1e7;
   padding: 32px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(78, 74, 74, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .calculator-title {
   text-align: center;
@@ -30,9 +41,18 @@
 }
 /* THIS IS KEY - Makes calculator and history side by side */
 .calculator-layout {
+  flex: 1;
   display: flex;
   gap: 24px;
-  align-items: flex-start;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 0;
+}
+.calculator {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }
 .button-grid {
   display: grid;
